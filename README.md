@@ -8,8 +8,9 @@ Fork of https://github.com/dperson/samba
        docker-compose run --build --rm samba-gen-hashes
        ```
      to `samba.env`.
-2. Change `/folder/to/serve` in `docker-compose.yml` to folder you want to share.
-3. Run
+3. Create .env from .env.example
+    - Choose folder to serve
+4. Run
     ```sh
     docker-compose up -d --build`
     ```

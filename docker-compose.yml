@@ -4,7 +4,7 @@ services:
     build: .
     container_name: simple-samba-server
     volumes:
-      - /folder/to/serve:/srv
+      - ${FOLDER_TO_SERVE}:/srv
     ports:
       - 139:139
       - 445:445
