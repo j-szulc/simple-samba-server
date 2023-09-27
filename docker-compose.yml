@@ -1,0 +1,19 @@
+
+services:
+  simple-samba-server:
+    build: .
+    container_name: simple-samba-server
+    volumes:
+      - /folder/to/serve:/srv
+    ports:
+      - 139:139
+      - 445:445
+    env_file: samba.env
+  samba-gen-hashes:
+    build: .
+    container_name: samba-gen-hashes
+    entrypoint: ["/usr/bin/gen_hashes.sh"]
+    tty: true
+    stdin_open: true
+    profiles:
+      - donotstart
