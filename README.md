@@ -14,4 +14,4 @@ Fork of https://github.com/dperson/samba
     ```sh
     docker-compose up -d --build`
     ```
-4. Mount `smb://admin@<docker host ip>:/srv`.
+4. Mount `smb://admin@<docker host ip>`.
